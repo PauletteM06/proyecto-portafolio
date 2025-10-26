@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --bg: #040420;
+  --textColor: #a9a9a9;
+  --textColorName: #e5e0e0;
+  --bg-avatar: #bd0874;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--textColor);
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  border: 3px solid white;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.header_name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--textColorName);
+  margin-top: 5px;
+}
+
+.header_profession {
+  font-family: "Playwrite DE SAS", cursive;
+}
+
+.header_avatar {
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  background: transparent;
+}
+
+.header_container_avatar {
+  margin: 40px auto 15px auto;
+  width: 150px;
+  position: relative;
+}
+
+.header_avatar_bg {
+  z-index: -1;
+  background: linear-gradient(90deg, #ff0080 7%, rgba(3, 3, 38, 1) 74%);
+  width: 150px;
+  height: 200px;
+  border-radius: 220px 40px 20px 19px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header_container_info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.header_button {
+  background-color: #040420;
+  color: var(--bg-avatar);
+  padding: 8px;
+  border-radius: 10px;
+  border: 0.5px solid var(--bg-avatar);
+  cursor: pointer;
+}
+
+.header_button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px 0px rgba(145, 10, 86, 0.6);
+}
+
+.header_socials {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+}
+
+.header_socials a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #ff0080);
+  transition: all 0.3s ease;
+}
+
+.sobre_mi_container {
+  width: 100%;
+  max-width: 375px;
+  font-size: 0.8rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.sobre_mi_title {
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sobre_mi_description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
