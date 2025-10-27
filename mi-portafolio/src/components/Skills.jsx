@@ -9,26 +9,26 @@ const Skills = () => {
   return (
     <>
     <div>
-        <h2>Tecnologías</h2>
+        <h2 className="skill_name">Tecnologías</h2>
         <div className="skill_container">
             <div className="skill">
-                <FaHtml5 size={40} color="#e34c26"/>
+                <FaHtml5 className="skill_icon" size={40} color="#e34c26"/>
                 <p className="skill_name">HTML</p>
             </div>
             <div className="skill">
-                <FaCss3Alt size={40} color="#264de4"/>
+                <FaCss3Alt className="skill_icon" size={40} color="#264de4"/>
                 <p className="skill_name">CSS</p>
             </div>
             <div className="skill">
-                <FaJs size={40} color="#f7df1e"/>
+                <FaJs className="skill_icon" size={40} color="#f7df1e"/>
                 <p className="skill_name">JavaScript</p>
             </div>
             <div className="skill">
-                <FaReact size={40} color="#61dafb"/>
+                <FaReact className="skill_icon" size={40} color="#61dafb"/>
                 <p className="skill_name">React</p>
             </div>
             <div className="skill">
-                <FaGitAlt size={40} color="#f05032"/>
+                <FaGitAlt className="skill_icon" size={40} color="#f05032"/>
                 <p className="skill_name">Git-GitHub</p>
             </div>
 

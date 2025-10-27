@@ -9,11 +9,11 @@ function App() {
 
   return (
     <>
-      <main>
-      <Header></Header>
-      <SobreMi></SobreMi>
-      <Skills></Skills>
-      <Proyectos></Proyectos>
+      <main className='container'>
+        <Header></Header>
+        <SobreMi></SobreMi>
+        <Skills></Skills>
+        <Proyectos></Proyectos>
       </main>
     </>
   )
