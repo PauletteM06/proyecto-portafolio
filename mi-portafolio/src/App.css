@@ -11,20 +11,39 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
 body {
   background-color: var(--bg);
   color: var(--textColor);
   font-family: "Nunito", sans-serif;
 }
 
+h2 {
+  color: var(--textColorName);
+  padding: 20px;
+  font-size: 1.3rem;
+}
+
 .header {
-  border: 3px solid white;
-  width: 375px;
+  max-width: 375px;
   display: flex;
   flex-direction: column;
   align-content: center;
   text-align: center;
   padding: 20px;
+  margin-bottom: 30px;
+}
+
+.header_title{
+  color: var(--textColor);
+  padding: 0;
+  font-size: 1.5rem;
 }
 
 .header_name {
@@ -47,14 +66,14 @@ body {
 
 .header_container_avatar {
   margin: 40px auto 15px auto;
-  width: 150px;
+  max-width: 150px;
   position: relative;
 }
 
 .header_avatar_bg {
   z-index: -1;
   background: linear-gradient(90deg, #ff0080 7%, rgba(3, 3, 38, 1) 74%);
-  width: 150px;
+  max-width: 150px;
   height: 200px;
   border-radius: 220px 40px 20px 19px;
   position: absolute;
@@ -68,16 +87,18 @@ body {
   gap: 15px;
 }
 
-.header_button {
-  background-color: #040420;
+.header_button,
+.project_button {
+  background-color: var(--bg);
   color: var(--bg-avatar);
-  padding: 8px;
+  padding: 6px;
   border-radius: 10px;
   border: 0.5px solid var(--bg-avatar);
   cursor: pointer;
 }
 
-.header_button:hover {
+.header_button:hover,
+.project_button:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
   box-shadow: 3px 3px 8px 0px rgba(145, 10, 86, 0.6);
@@ -99,19 +120,66 @@ body {
 .sobre_mi_container {
   width: 100%;
   max-width: 375px;
-  font-size: 0.8rem;
   text-align: center;
+  margin-bottom: 30px;
 }
 
-
-.sobre_mi_title {
-  padding: 20px;
-}
 
 .sobre_mi_description {
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 0 20px;
+  padding: 0 30px;
+}
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  width: 100%;
+  max-width: 375px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project_img {
+  max-width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+}
+.project_name {
+  color: var(--textColorName);
+}
+
+.project_description {
+  margin-bottom: 10px;
+}
+.project_button_container {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  max-width: 180px;
+  margin-bottom: 10px;
+}
+.project_tecnologies_container {
+  margin-bottom: 25px;
+}
+
+.skill_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+.skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.skill_container p{
+  font-size: 0.9rem;
 }
 
 
