@@ -118,11 +118,15 @@ h2 {
   transition: all 0.3s ease;
 }
 
+.sobre_mi_title{
+  margin-top: 20px;
+}
+
 .sobre_mi_container {
   width: 100%;
-  max-width: 375px;
+  max-width: 320px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .sobre_mi_description {
@@ -153,7 +157,8 @@ h2 {
   font-size: 0.9rem;
 }
 
-.project_container {
+
+.project_card_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
@@ -240,6 +245,11 @@ h2 {
     height: 35px;
     margin-left: 5px;
   }
+
+  .sobre_mi_container{
+    max-width: 400px;
+  }
+
   .sobre_mi_description, .sobre_mi_profession {
     font-size: 1.3rem;
   }
@@ -320,6 +330,24 @@ h2 {
   .header_button{
     font-size: 1rem;
   }
+
+  .sobre_mi_container, .skill_container{
+    max-width: 700px;
+  }
+  .project_container {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+
+
+
+
+
+ 
   
 }
 
@@ -327,4 +355,4 @@ h2 {
 
 
   
-}
+

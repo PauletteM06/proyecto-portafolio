@@ -55,16 +55,12 @@ const Proyectos = () => {
 
   return (
     <>
-    <div className="project_container">
         <h2 className="project_title">Proyectos</h2>
-        <div>
-            {proyectos.map(project => (
-                <ProjectCard key={project.id} {...project}></ProjectCard>
-            ))}
-            
+        <div className="project_container">
+        {proyectos.map(project => (
+            <ProjectCard key={project.id} {...project} />
+        ))}
         </div>
-    </div>
-    
     </>
   )
 }
