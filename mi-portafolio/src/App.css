@@ -5,6 +5,10 @@
   --bg-avatar: #bd0874;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +19,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin: 0 auto;
+}
+
+.section{
+  scroll-margin-top: 80px;
 }
 
 body {
@@ -23,6 +32,66 @@ body {
   color: var(--textColor);
   font-family: "Nunito", sans-serif;
 }
+
+.nav {
+  position:fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(4, 4, 32, 0.9);
+  z-index: 100;
+  width: 375px;
+  height: 60px;
+}
+
+.nav_logo_container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font-size: 0.9rem;
+}
+
+.nav_container{
+  border: 1px solid wheat;
+  display: none;
+  border: 2px solid var(--bg-avatar);
+  position: absolute;
+  width: 70%;
+  height: 600px;
+  right: 0;
+  background-color: rgba(4, 4, 32, 0.9);
+}
+
+.btn_menu{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid var(--bg-avatar);
+  background-color: var(--bg);
+  z-index: 1;
+}
+
+.nav_link{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: right;
+  padding: 20px;
+  gap: 15px;
+  margin-top: 60px;
+}
+
+.nav_link a{
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
 
 h2 {
   color: var(--textColorName);
@@ -37,7 +106,7 @@ h2 {
   align-content: center;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 70px;
   margin-bottom: 50px;
 }
 
@@ -118,7 +187,7 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.sobre_mi_title{
+.sobre_mi_title {
   margin-top: 20px;
 }
 
@@ -135,7 +204,7 @@ h2 {
   padding: 0 30px;
 }
 
-.skill_name{
+.skill_name {
   margin-bottom: 30px;
 }
 
@@ -157,7 +226,6 @@ h2 {
   font-size: 0.9rem;
 }
 
-
 .project_card_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -168,7 +236,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-.project_title{
+.project_title {
   margin-bottom: 30px;
 }
 
@@ -195,9 +263,14 @@ h2 {
   margin-bottom: 25px;
 }
 
-
-
 @media (min-width: 768px) {
+  .btn_menu {
+    display: block;
+  }
+
+  .nav_link {
+    display: none;
+  }
   .container {
     max-width: 600px;
     margin: 0 auto;
@@ -246,15 +319,16 @@ h2 {
     margin-left: 5px;
   }
 
-  .sobre_mi_container{
+  .sobre_mi_container {
     max-width: 400px;
   }
 
-  .sobre_mi_description, .sobre_mi_profession {
+  .sobre_mi_description,
+  .sobre_mi_profession {
     font-size: 1.3rem;
   }
 
-  .skill_icon{
+  .skill_icon {
     width: 60px;
     height: 60px;
   }
@@ -281,17 +355,47 @@ h2 {
     font-size: 1rem;
   }
 
-  .project_button_container{
+  .project_button_container {
     margin-bottom: 15px;
   }
 }
 
-@media (min-width: 1200px){
-  .container{
+@media (min-width: 1200px) {
+  .nav {
+  width: 800px;
+  height: 80px;
+  }
+
+  .nav_logo_container{
+    font-size: 1.2rem;
+  }
+
+  .nav_container{
+    display: block;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+  
+  }
+
+  .btn_menu{
+    display: none;
+  }
+
+  .nav_link{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: 80px;
+    margin-top: 0;
+    
+  }
+
+  .container {
     max-width: 1000px;
   }
 
-  .header{
+  .header {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -302,11 +406,11 @@ h2 {
     margin: 0;
   }
 
-  .header_title{
+  .header_title {
     font-size: 2.2rem;
   }
 
-  .header_name{
+  .header_name {
     font-size: 2.5rem;
   }
 
@@ -315,7 +419,7 @@ h2 {
     height: 300px;
   }
 
-  .header_container_avatar{
+  .header_container_avatar {
     margin-bottom: 40px;
   }
 
@@ -327,13 +431,19 @@ h2 {
     border-radius: 220px 40px 20px 19px;
   }
 
-  .header_button{
+  .header_button {
     font-size: 1rem;
   }
 
-  .sobre_mi_container, .skill_container{
+  .sobre_mi_container,
+  .skill_container {
     max-width: 700px;
   }
+
+  .skill_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
   .project_container {
     max-width: 900px;
     display: grid;
@@ -341,18 +451,4 @@ h2 {
     gap: 30px;
     margin: 0 auto;
   }
-
-
-
-
-
-
- 
-  
 }
-
-
-
-
-  
-
