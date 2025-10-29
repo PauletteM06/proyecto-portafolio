@@ -19,7 +19,7 @@ const Footer = () => {
           <a href="https://api.whatsapp.com/send?phone=56940884152" target="_blank">
             <FaWhatsapp color="#ff0080" size={22} />
           </a>
-          <p>Whatsapp</p>
+          <p className="p_contact">Whatsapp</p>
 
           </div>
 
@@ -31,7 +31,7 @@ const Footer = () => {
             >
               <AiOutlineMail color="#ff0080" size={22} />
             </a>
-            <p>marquez06t@gmail.com</p>
+            <p className="p_contact">marquez06t@gmail.com</p>
           </div>
         </div>
       </div>
