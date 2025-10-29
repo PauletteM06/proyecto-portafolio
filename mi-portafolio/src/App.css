@@ -159,7 +159,7 @@ h2 {
 
 .header_button,
 .project_button {
-  background-color: var(--bg);
+  background-color: transparent;
   color: var(--bg-avatar);
   padding: 8px;
   border-radius: 10px;
@@ -261,6 +261,44 @@ h2 {
 }
 .project_tecnologies_container {
   margin-bottom: 25px;
+}
+
+.footer_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 120px;
+  width: 375px;
+}
+
+.footer_container_logo{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
+}
+
+.footer_contact{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_contact a{
+  width: 28px;
+  background-color: transparent;
+  border: none;
+}
+
+.footer_contact a:hover{
+  cursor: pointer;
+}
+
+.footer_contact_email{
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {

@@ -37,7 +37,7 @@ const Header = () => {
                 <FaLinkedin className="icon" size={25} color="#ff0080" />
               </a>
               <a
-                href="mailto:marqueztorresscarlett@gmail.com?subject=Consulta%20desde%20tu%20portafolio"
+                href="mailto:marquez06t@gmail.com?subject=Consulta%20desde%20tu%20portafolio"
                 target="_blank"
                 rel="noopener noreferrer"
               >
